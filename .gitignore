@@ -1,0 +1,8 @@
+node_modules/
+.env
+dist/
+out/
+.next/
+.DS_Store
+Thumbs.db
+.vscode/settings.json
