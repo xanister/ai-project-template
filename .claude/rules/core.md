@@ -30,12 +30,6 @@ Fallbacks (`|| []`, `catch { return default }`) mask bugs. Let errors propagate.
 2. Did I add `// eslint-disable` or `@ts-ignore`? -> **Fix the code or the type, not the linter**
 3. Did I add an `exclude` or `ignore` pattern to hide a failure? -> **Understand why it fails and fix it**
 
-### Director Must Use Named Pool Agents
-
-When the Director needs a specialist (designer, researcher, architect, reviewer, tester, developer, deployer), it **must** use `hire_and_spawn_agent` or `send_to_agent`. The Director must **never** use the Agent tool or any internal mechanism to spawn anonymous, unnamed subagents for pipeline roles.
-
-Anonymous subagents bypass agent lifecycle, produce no message history, are invisible in the agents panel, and cannot be resumed — this violates the pipeline contract.
-
 ### One Question Per Turn (STOP Gate)
 
 After calling `send_message` with `message_type: "question"`, **STOP immediately**:

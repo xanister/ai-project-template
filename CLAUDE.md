@@ -21,7 +21,7 @@ All project rules live in `.claude/rules/`. Read them before planning or coding:
 
 ## Key Conventions
 
-<!-- Fill in the conventions that are specific to this project. Examples: -->
+<!-- Keep the rules below — they are universal and required. Add project-specific conventions beneath them. -->
 
 - **No backwards compatibility** — delete old code, don't deprecate.
 - **No error swallowing** — let errors propagate; fix the contract, not the call site.
