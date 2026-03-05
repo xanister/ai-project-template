@@ -65,3 +65,20 @@ These rules are universal and must stay in any project using this template:
 - **No suppression as a fix** — don't `eslint-disable` or `@ts-ignore`; fix the actual issue
 - **Plan-first** — every code change needs an active GitHub Issue with a filled-in Plan
 - **WIP-1** — one work item per agent; file new issues for discovered work
+
+## Setting Up Labels
+
+When you create a repo from this template, GitHub does **not** copy labels automatically. Run this one-time setup to create the required labels:
+
+```bash
+REPO=<owner>/<repo>  # replace with your repo slug
+
+gh label create type:feat         --repo $REPO --color 0075ca --description "Feature request"
+gh label create type:bug          --repo $REPO --color d73a4a --description "Bug report"
+gh label create type:idea         --repo $REPO --color e4e669 --description "Half-baked idea"
+gh label create state:in-progress --repo $REPO --color ededed --description "Claimed and being worked on"
+gh label create state:backlog     --repo $REPO --color ededed --description "Parked long-term"
+gh label create priority:high     --repo $REPO --color b60205 --description "High priority"
+gh label create priority:medium   --repo $REPO --color fbca04 --description "Medium priority"
+gh label create priority:low      --repo $REPO --color 0e8a16 --description "Low priority"
+```
